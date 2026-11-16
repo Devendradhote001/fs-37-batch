@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 90%;
+  width: 90%;
+}
+
+div {
+  font-size: 30px;
+  text-align: end;
+  height: 90%;
+  width: 90%;
+  background-color: red;
+}
+
+#d2 {
+  background-color: yellow;
+}
+#d3 {
+  background-color: rgba(0, 255, 102, 0.968);
+}
+#d4 {
+  background-color: rgb(25, 0, 255);
+}
+#d5 {
+  background-color: rgb(255, 0, 85);
+}
+#d6 {
+  background-color: rgb(49, 182, 203);
+}
+#d7 {
+  background-color: green;
+}
