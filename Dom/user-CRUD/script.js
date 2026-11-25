@@ -8,32 +8,7 @@ let form = document.querySelector("form");
 
 let container = document.querySelector(".container");
 
-let productArr = [
-  {
-    productName: "dhfksdhf",
-    productPrice: "dsjgdjs",
-    productImage:
-      "https://pebel.in/cdn/shop/files/pastel_green_only.jpg?v=1764584471",
-  },
-  {
-    productName: "Watch",
-    productPrice: "2000",
-    productImage:
-      "https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/2026/FEBRUARY/28/5NEFIynW_878d34044605410b9e1a0dd3114a9a99.jpg",
-  },
-  {
-    productName: "Mobile",
-    productPrice: "30000",
-    productImage:
-      "https://www.gstatic.com/marketing-cms/assets/images/a7/f2/a0de02674b2ead4541c808386585/03-unpacked-use-case-do-more-1440w-2x.webp",
-  },
-  {
-    productName: "Washing Machine",
-    productPrice: "40000",
-    productImage:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjqadhA0y3KOyGbTKAMkNE4SHvspidoCz6gxwlbsgyp5ErCVjS21IrcnE&s=10",
-  },
-];
+let productArr = JSON.parse(localStorage.getItem("productsData")) || []
 
 let isUpdateClicked = null;
 
@@ -86,6 +61,7 @@ form.addEventListener("submit", (e) => {
     isUpdateClicked = null;
   } else {
     productArr.push(productObj);
+    localStorage.setItem("productsData", JSON.stringify(productArr));
   }
 
   renderUi();
@@ -119,3 +95,11 @@ let updateProduct = (index) => {
 
   formBox.style.display = "flex";
 };
+
+let obj = {
+  name: "Ashish",
+  age: 21,
+  college: "Sage",
+};
+
+// JSON -> javascript object Notation
